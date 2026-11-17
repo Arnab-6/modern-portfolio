@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arnab Saha — 1st Year CS & Tech Student at NST Hyderabad, Hacktoberfest Winner, and Creator of MeetingShield (On-Device AI with Google Gemma 2).">
+  <meta name="author" content="Arnab Saha">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arnab Saha | CS Undergrad @ NST Hyderabad">
+  <meta property="og:description" content="Creator of MeetingShield — 100% on-device meeting intelligence running Google Gemma 2. Hacktoberfest Winner.">
+  <meta property="og:image" content="assets/profile-placeholder.svg">
+
+  <title>Arnab Saha — CS Undergrad @ NST Hyderabad & Builder</title>
+
+  <!-- Google Fonts: Space Grotesk, Manrope, Caveat, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-nest">
+
+  <!-- Ambient Sky / Sunset Gradient Backdrop -->
+  <div class="sky-scene" aria-hidden="true">
+    <div class="sunset-sun"></div>
+    <div class="stars-layer"></div>
+    <div class="clouds-layer"></div>
+    <div class="mountain-silhouette hill-far"></div>
+    <div class="mountain-silhouette hill-mid"></div>
+    <div class="mountain-silhouette hill-near"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="nest-header" id="header">
+    <div class="nest-container header-inner">
+      <a href="#hero" class="brand-link" aria-label="Arnab Saha Home">
+        <span class="brand-badge">&lt;nest/&gt;</span>
+        <span class="brand-name">Arnab<span class="brand-highlight">.build</span></span>
+      </a>
+
+      <!-- Handwritten Status Pill -->
+      <div class="handwritten-status hide-mobile">
+        <span class="caveat-arrow">↳</span>
+        <span class="caveat-text">NST Hyderabad 1st Year • Hacktoberfest Winner 🏆</span>
+      </div>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#skills" class="nav-item">Toolkit</a></li>
+          <li><a href="#journey" class="nav-item">Journey</a></li>
+          <li><a href="#faq" class="nav-item">FAQ</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/Arnab-6" target="_blank" rel="noopener noreferrer" class="btn btn-sunset hide-mobile">
+          <i data-lucide="github"></i>
+          <span>GitHub</span>
+        </a>
+
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu" class="icon-open"></i>
+          <i data-lucide="x" class="icon-close"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-links">
+        <li><a href="#about" class="mobile-item">About</a></li>
+        <li><a href="#projects" class="mobile-item">Projects</a></li>
+        <li><a href="#skills" class="mobile-item">Toolkit</a></li>
+        <li><a href="#journey" class="mobile-item">Journey</a></li>
+        <li><a href="#faq" class="mobile-item">FAQ</a></li>
+        <li><a href="#contact" class="mobile-item">Contact</a></li>
+      </ul>
+      <a href="https://github.com/Arnab-6" target="_blank" rel="noopener noreferrer" class="btn btn-sunset btn-full mobile-cta">
+        <i data-lucide="github"></i>
+        <span>Visit My GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="nest-container hero-inner">
+        
+        <div class="hero-content">
+          <div class="tag-pill-group">
+            <span class="nest-badge">
+              <span class="badge-dot"></span>
+              CS Undergrad @ NST Hyderabad
+            </span>
+            <span class="hacktober-pill">
+              <i data-lucide="award"></i> Hacktoberfest Winner
+            </span>
+          </div>
+
+          <h1 class="hero-heading">
+            Building on-device AI & <span class="sunset-glow-text">open-source software</span>.
+          </h1>
+
+          <p class="hero-subtext">
+            Hey, I'm <strong class="text-highlight">Arnab Saha</strong>. First-year computer science undergrad at <strong>Newton School of Technology (NST), Hyderabad</strong>, alumnus of <strong>APS Shillong</strong>, and proud <strong>Hacktoberfest Winner</strong>. I build intelligent on-device AI tools and privacy-first systems.
+          </p>
+
+          <div class="hero-button-row">
+            <button class="btn btn-sunset" onclick="openMeetingShieldDemo()">
+              <i data-lucide="play-circle"></i>
+              <span>Test MeetingShield Live</span>
+            </button>
+            <a href="#projects" class="btn btn-sketch">
+              <i data-lucide="compass"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="https://github.com/Arnab-6" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-nest">
+              <i data-lucide="github"></i>
+              <span>GitHub Profile</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="metrics-panel">
+            <div class="metric-block">
+              <span class="metric-val">NST</span>
+              <span class="metric-name">Hyderabad (1st Yr)</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-block">
+              <span class="metric-val">100%</span>
+              <span class="metric-name">Hacktoberfest Won</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-block">
+              <span class="metric-val">Gemma 2</span>
+              <span class="metric-name">On-Device AI</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-block">
+              <span class="metric-val">0 Cloud</span>
+              <span class="metric-name">Privacy-First</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Profile Photo Frame & Terminal Card -->
+        <div class="hero-visual-column">
+          
+          <!-- Profile Photo Frame -->
+          <div class="profile-photo-container">
+            <div class="photo-glow-ring"></div>
+            <div class="photo-frame-inner">
+              <img 
+                src="assets/profile.jpg" 
+                alt="Arnab Saha" 
+                id="profile-img"
+                class="user-profile-photo"
+                onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';"
+              >
+              <div class="photo-caption-badge">
+                <span class="pulse-green"></span>
+                <span>Arnab Saha • NST Hyd</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terminal Card -->
+          <div class="terminal-card">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <span class="terminal-title">arnab_profile.ts</span>
+              <span class="terminal-status">BUILDER</span>
+            </div>
+            <div class="terminal-body">
+              <div class="code-line"><span class="c-dim">// Builder profile</span></div>
+              <div class="code-line"><span class="c-keyword">const</span> <span class="c-type">arnab</span> = {</div>
+              <div class="code-line indent"><span class="c-prop">name</span>: <span class="c-string">"Arnab Saha"</span>,</div>
+              <div class="code-line indent"><span class="c-prop">college</span>: <span class="c-string">"NST Hyderabad (1st Year)"</span>,</div>
+              <div class="code-line indent"><span class="c-prop">school</span>: <span class="c-string">"APS Shillong"</span>,</div>
+              <div class="code-line indent"><span class="c-prop">achievement</span>: <span class="c-string">"Hacktoberfest Winner 🏆"</span>,</div>
+              <div class="code-line indent"><span class="c-prop">flagshipProject</span>: <span class="c-string">"MeetingShield (Gemma 2 AI)"</span>,</div>
+              <div class="code-line indent"><span class="c-prop">mindset</span>: <span class="c-string">"Privacy first, on-device intelligence"</span></div>
+              <div class="code-line">};</div>
+            </div>
+            <div class="terminal-footer">
+              <span class="tag-pill"><i data-lucide="shield-check"></i> On-Device AI</span>
+              <span class="tag-pill"><i data-lucide="git-pull-request"></i> Open Source</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="nest-section" id="about">
+      <div class="nest-container">
+        
+        <div class="section-title-wrap">
+          <span class="section-kicker">The Story</span>
+          <h2 class="section-headline">Curiosity from Shillong to <span class="sunset-glow-text">Hyderabad</span></h2>
+          <p class="section-desc">
+            From early problem solving at Army Public School (APS) Shillong to studying Computer Science at Newton School of Technology (NST) Hyderabad.
+          </p>
+        </div>
+
+        <div class="about-flex-layout">
+          <!-- Sketch Paper Notebook Card -->
+          <div class="sketch-paper-card">
+            <div class="sketch-tape" aria-hidden="true"></div>
+            <div class="sketch-header">
+              <h3 class="sketch-title">My Journey & Drive</h3>
+              <span class="sketch-note-tag">// field notes</span>
+            </div>
+            <p class="sketch-paragraph">
+              My interest in technology began at <strong>APS Shillong</strong>, where I developed strong problem-solving habits and discovered computer science. Today, as a first-year student at <strong>Newton School of Technology (NST), Hyderabad</strong>, I am actively building real-world projects that combine software engineering with modern AI.
+            </p>
+            <p class="sketch-paragraph">
+              A key milestone in my journey has been winning <strong>Hacktoberfest</strong>, where I made meaningful contributions to open-source repositories and collaborated with developers worldwide.
+            </p>
+            <p class="sketch-paragraph">
+              My flagship project is <strong>MeetingShield</strong>—a privacy-preserving tool that uses <strong>Google Gemma 2</strong> on-device to transcribe, summarize, and extract action items from meetings without routing private voice data to third-party cloud servers.
+            </p>
+
+            <div class="handwritten-callout">
+              <span class="caveat-text-large">"Build things that protect privacy, contribute to open source, and never stop learning."</span>
+              <span class="caveat-author">— Arnab Saha</span>
+            </div>
+          </div>
+
+          <!-- Feature Cards -->
+          <div class="principles-stack">
+            <div class="pillar-card track-green">
+              <div class="pillar-icon"><i data-lucide="shield"></i></div>
+              <div class="pillar-content">
+                <h4 class="pillar-heading">On-Device AI & Gemma 2</h4>
+                <p class="pillar-text">Running intelligent models directly on hardware to guarantee zero data leakage and 100% offline privacy in MeetingShield.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card track-purple">
+              <div class="pillar-icon"><i data-lucide="award"></i></div>
+              <div class="pillar-content">
+                <h4 class="pillar-heading">Hacktoberfest Winner</h4>
+                <p class="pillar-text">Demonstrated commitment to the global developer community through quality open-source contributions and approved pull requests.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card track-orange">
+              <div class="pillar-icon"><i data-lucide="cpu"></i></div>
+              <div class="pillar-content">
+                <h4 class="pillar-heading">Computer Science Rigor</h4>
+                <p class="pillar-text">Mastering core algorithms, systems architecture, and modern programming languages at NST Hyderabad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section (Curated to only what Arnab has built) -->
+    <section class="nest-section section-soil-tint" id="projects">
+      <div class="nest-container">
+        
+        <div class="section-title-wrap">
+          <span class="section-kicker">Flagship Work</span>
+          <h2 class="section-headline">Featured <span class="sunset-glow-text">Projects</span></h2>
+          <p class="section-desc">
+            Detailed case studies of my projects and open-source contributions.
+          </p>
+        </div>
+
+        <div class="projects-featured-grid">
+          
+          <!-- Project 1: MeetingShield (Flagship) -->
+          <article class="track-project-card depot-ai featured-hero-card" data-id="1">
+            <div class="track-card-header">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <span class="track-tag tag-ai">Flagship Project</span>
+                <span class="track-tag" style="background: rgba(255, 207, 122, 0.2); color: var(--sun-glow); border: 1px solid var(--sky-horizon);">Google Gemma 2</span>
+              </div>
+              <span class="track-date">Active • Open Source</span>
+            </div>
+            
+            <div class="featured-card-split">
+              <div class="track-card-image featured-img-box">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="MeetingShield on-device AI" loading="lazy">
+                <div class="track-image-badge">100% On-Device AI</div>
+              </div>
+
+              <div class="track-card-body">
+                <h3 class="track-project-title">MeetingShield — 100% On-Device Meeting Intelligence</h3>
+                <p class="track-project-summary">
+                  MeetingShield is a privacy-first meeting intelligence system running <strong>Google Gemma 2</strong> directly on your device. It analyzes audio, extracts critical decisions, assigns action items with owners, and detects consensus gaps across discussions without sending a single byte of audio or transcripts to closed cloud APIs.
+                </p>
+                <div class="track-tags-list">
+                  <span class="mini-tag">TypeScript</span>
+                  <span class="mini-tag">Google Gemma 2</span>
+                  <span class="mini-tag">On-Device AI</span>
+                  <span class="mini-tag">Offline Privacy</span>
+                  <span class="mini-tag">Action Extraction</span>
+                </div>
+                <div class="track-card-actions">
+                  <button class="btn btn-sunset open-study-btn" onclick="openCaseStudy(1)">
+                    <span>Explore Full Case Study</span>
+                    <i data-lucide="arrow-right"></i>
+                  </button>
+                  <button class="btn btn-sketch" onclick="openMeetingShieldDemo()" title="Test MeetingShield in your browser">
+                    <i data-lucide="play" style="color: #10b981;"></i>
+                    <span>Try Live Demo</span>
+                  </button>
+                  <a href="https://github.com/GodGamerAgent/MeetingShield" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-nest" title="View Source Code on GitHub">
+                    <i data-lucide="github"></i>
+                    <span>Repository</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Hacktoberfest Open-Source Contributions -->
+          <article class="track-project-card depot-saas featured-hero-card" data-id="2">
+            <div class="track-card-header">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <span class="track-tag tag-saas">Open Source Milestone</span>
+                <span class="track-tag" style="background: rgba(246, 162, 92, 0.2); color: var(--sun-glow); border: 1px solid var(--sky-horizon);">Global Community</span>
+              </div>
+              <span class="track-date">🏆 Completed & Won</span>
+            </div>
+
+            <div class="featured-card-split">
+              <div class="track-card-image featured-img-box">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Hacktoberfest Open Source Contributions" loading="lazy">
+                <div class="track-image-badge" style="background: var(--sky-horizon); color: var(--accent-ink);">Hacktoberfest Winner</div>
+              </div>
+
+              <div class="track-card-body">
+                <h3 class="track-project-title">Hacktoberfest — Open-Source Contributions & Verified PRs</h3>
+                <p class="track-project-summary">
+                  Successfully completed and won <strong>Hacktoberfest</strong> by authoring approved pull requests to open-source software repositories. Focused on bug resolution, documentation precision, and code enhancements that meet rigorous open-source maintainer guidelines.
+                </p>
+                <div class="track-tags-list">
+                  <span class="mini-tag">Open Source</span>
+                  <span class="mini-tag">Git & GitHub</span>
+                  <span class="mini-tag">Pull Requests</span>
+                  <span class="mini-tag">Code Review</span>
+                  <span class="mini-tag">Community Collaboration</span>
+                </div>
+                <div class="track-card-actions">
+                  <button class="btn btn-sunset open-study-btn" onclick="openCaseStudy(2)">
+                    <span>Read Contribution Journey</span>
+                    <i data-lucide="arrow-right"></i>
+                  </button>
+                  <button class="btn btn-sketch" onclick="openHacktoberfestExplorer()" title="Inspect merged Pull Requests, diffs, and reviews">
+                    <i data-lucide="git-pull-request" style="color: #a855f7;"></i>
+                    <span>Explore PRs Live</span>
+                  </button>
+                  <a href="https://github.com/Arnab-6" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-nest" title="View GitHub Profile">
+                    <i data-lucide="github"></i>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Toolkit Section -->
+    <section class="nest-section" id="skills">
+      <div class="nest-container">
+        
+        <div class="section-title-wrap">
+          <span class="section-kicker">Core Stack</span>
+          <h2 class="section-headline">Languages & <span class="sunset-glow-text">Technologies</span></h2>
+          <p class="section-subtitle">
+            Tools I actively build with across AI, systems, and software engineering.
+          </p>
+        </div>
+
+        <div class="toolkit-grid">
+          
+          <div class="tool-pill">
+            <div class="tool-icon"><i data-lucide="code-2"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">TypeScript & JavaScript</span>
+              <span class="tool-exp">MeetingShield & Web Applications</span>
+            </div>
+          </div>
+
+          <div class="tool-pill">
+            <div class="tool-icon"><i data-lucide="bot"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Google Gemma 2 & On-Device AI</span>
+              <span class="tool-exp">Local LLM Inference & Action Parsing</span>
+            </div>
+          </div>
+
+          <div class="tool-pill">
+            <div class="tool-icon"><i data-lucide="terminal"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Python</span>
+              <span class="tool-exp">Scripting, AI tooling & Algorithms</span>
+            </div>
+          </div>
+
+          <div class="tool-pill">
+            <div class="tool-icon"><i data-lucide="git-pull-request"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Git & GitHub</span>
+              <span class="tool-exp">Hacktoberfest Winner • Open Source</span>
+            </div>
+          </div>
+
+          <div class="tool-pill">
+            <div class="tool-icon"><i data-lucide="layout"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">HTML5 & Modern CSS</span>
+              <span class="tool-exp">Responsive Design, Grid & Flexbox</span>
+            </div>
+          </div>
+
+          <div class="tool-pill">
+            <div class="tool-icon"><i data-lucide="shield-check"></i></div>
+            <div class="tool-info">
+              <span class="tool-name">Privacy-First Architecture</span>
+              <span class="tool-exp">Zero Cloud Data Leakage</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Journey Section -->
+    <section class="nest-section section-soil-tint" id="journey">
+      <div class="nest-container">
+        
+        <div class="section-title-wrap">
+          <span class="section-kicker">Education & Milestones</span>
+          <h2 class="section-headline">The Builder's <span class="sunset-glow-text">Journey</span></h2>
+          <p class="section-desc">
+            Where I started, where I am learning today, and what I have achieved.
+          </p>
+        </div>
+
+        <div class="flight-timeline">
+          
+          <!-- Current: NST Hyderabad -->
+          <div class="timeline-row">
+            <div class="timeline-dot-col">
+              <span class="glow-node"></span>
+              <span class="stem-line"></span>
+            </div>
+            <div class="timeline-card-content">
+              <div class="card-meta-bar">
+                <span class="role-badge">Present • 1st Year Undergrad</span>
+                <span class="company-tag">Newton School of Technology (NST), Hyderabad</span>
+              </div>
+              <h3 class="role-title">B.Tech in Computer Science & AI</h3>
+              <p class="role-summary">
+                Studying core computing, data structures, algorithms, AI systems, and software development at one of India's leading modern tech campuses.
+              </p>
+              <ul class="role-bullet-points">
+                <li>Building on-device AI applications using Google Gemma 2 and TypeScript (MeetingShield).</li>
+                <li>Developing strong algorithmic foundations and computer systems understanding.</li>
+                <li>Actively engaging in university hackathons and open-source software building.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hacktoberfest Winner -->
+          <div class="timeline-row">
+            <div class="timeline-dot-col">
+              <span class="glow-node"></span>
+              <span class="stem-line"></span>
+            </div>
+            <div class="timeline-card-content">
+              <div class="card-meta-bar">
+                <span class="role-badge" style="background: rgba(246, 162, 92, 0.25); color: var(--sun-glow);">🏆 Global Milestone</span>
+                <span class="company-tag">DigitalOcean & Open Source Community</span>
+              </div>
+              <h3 class="role-title">Hacktoberfest Winner</h3>
+              <p class="role-summary">
+                Successfully completed and won Hacktoberfest by contributing verified pull requests, bug fixes, and feature improvements to global open-source software repositories.
+              </p>
+              <ul class="role-bullet-points">
+                <li>Authored approved, quality PRs adhering to strict open-source review guidelines.</li>
+                <li>Collaborated with maintainers worldwide across developer tooling and library ecosystems.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Schooling: APS Shillong -->
+          <div class="timeline-row">
+            <div class="timeline-dot-col">
+              <span class="glow-node"></span>
+            </div>
+            <div class="timeline-card-content">
+              <div class="card-meta-bar">
+                <span class="role-badge">Schooling</span>
+                <span class="company-tag">Army Public School (APS), Shillong</span>
+              </div>
+              <h3 class="role-title">High School Education</h3>
+              <p class="role-summary">
+                Completed schooling from APS Shillong with strong fundamentals in mathematics, science, and computer science.
+              </p>
+              <ul class="role-bullet-points">
+                <li>Developed early programming curiosity and logical problem-solving skills.</li>
+                <li>Participated in school computing activities and academic competitions.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="nest-section" id="faq">
+      <div class="nest-container">
+        
+        <div class="section-title-wrap">
+          <span class="section-kicker">Got Questions?</span>
+          <h2 class="section-headline">Frequently Asked <span class="sunset-glow-text">Inquiries</span></h2>
+          <p class="section-desc">
+            Direct answers on my background, tech focus, and projects.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list">
+          
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What is your current academic status?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>I am a 1st-year undergraduate student studying Computer Science and Technology at Newton School of Technology (NST), Hyderabad. I completed my schooling from Army Public School (APS), Shillong.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>How does MeetingShield protect meeting privacy?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>Unlike cloud transcription services that upload your conversations to remote servers, MeetingShield executes Google Gemma 2 completely locally on your hardware. Audio and transcripts never leave your machine, guaranteeing total confidentiality.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What was your experience with Hacktoberfest?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>Winning Hacktoberfest was an invaluable experience. It taught me how to navigate large unfamiliar codebases, communicate effectively with international maintainers, and write clean, tested code that meets real-world review standards.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Are you open to hackathons and collaborations?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer-panel">
+              <p>Yes! I love collaborating on student hackathons, building on-device AI tools, and shipping impactful software. Feel free to connect via the form below or through GitHub.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="nest-section section-soil-deep" id="contact">
+      <div class="nest-container">
+        
+        <div class="contact-box-grid">
+          
+          <div class="contact-left-info">
+            <span class="section-kicker">Get in Touch</span>
+            <h2 class="contact-header">Let's connect & <br><span class="sunset-glow-text">build together.</span></h2>
+            <p class="contact-description">
+              Whether you want to discuss on-device AI, collaborate on a project, or just say hello, my inbox is always open.
+            </p>
+
+            <div class="contact-card-stack">
+              <div class="contact-info-pill">
+                <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
+                <div class="contact-text-box">
+                  <span class="pill-title">Current Campus</span>
+                  <span class="pill-value">Newton School of Technology (NST), Hyderabad</span>
+                </div>
+              </div>
+
+              <div class="contact-info-pill">
+                <div class="contact-icon-box"><i data-lucide="github"></i></div>
+                <div class="contact-text-box">
+                  <span class="pill-title">GitHub</span>
+                  <div class="email-copy-wrapper">
+                    <span class="pill-value">Arnab Saha on GitHub</span>
+                    <a href="https://github.com/Arnab-6" target="_blank" rel="noopener noreferrer" class="copy-action-btn">
+                      <span>Visit</span>
+                      <i data-lucide="external-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-info-pill">
+                <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+                <div class="contact-text-box">
+                  <span class="pill-title">Direct Email</span>
+                  <div class="email-copy-wrapper">
+                    <span class="pill-value" id="email-val">arnabsaha.nst@gmail.com</span>
+                    <button class="copy-action-btn" id="copy-email-btn" title="Copy email address">
+                      <i data-lucide="copy"></i>
+                      <span class="copy-label">Copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-deck">
+              <a href="https://github.com/Arnab-6" target="_blank" rel="noopener noreferrer" class="social-chip">
+                <i data-lucide="github"></i>
+                <span>GitHub Profile</span>
+              </a>
+              <a href="https://github.com/GodGamerAgent/MeetingShield" target="_blank" rel="noopener noreferrer" class="social-chip">
+                <i data-lucide="shield"></i>
+                <span>MeetingShield Repo</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-right-form">
+            <div class="form-sketch-panel">
+              <h3 class="form-panel-title">Drop a Note to Arnab</h3>
+              <p class="form-panel-sub">Leave a message and I'll reply promptly.</p>
+
+              <form id="contact-form" novalidate>
+                <div class="input-block">
+                  <label for="form-name" class="input-label">Your Name <span class="req">*</span></label>
+                  <input type="text" id="form-name" name="name" class="nest-input" placeholder="e.g. Rahul Sharma" required>
+                  <span class="input-error-msg" id="name-error">Please enter your name.</span>
+                </div>
+
+                <div class="input-block">
+                  <label for="form-email" class="input-label">Email Address <span class="req">*</span></label>
+                  <input type="email" id="form-email" name="email" class="nest-input" placeholder="rahul@example.com" required>
+                  <span class="input-error-msg" id="email-error">Please enter a valid email.</span>
+                </div>
+
+                <div class="input-block">
+                  <label for="form-subject" class="input-label">Subject</label>
+                  <input type="text" id="form-subject" name="subject" class="nest-input" placeholder="Collaboration / Hackathon / Question">
+                </div>
+
+                <div class="input-block">
+                  <label for="form-message" class="input-label">Your Message <span class="req">*</span></label>
+                  <textarea id="form-message" name="message" rows="4" class="nest-input nest-textarea" placeholder="What's on your mind? Let's connect..." required></textarea>
+                  <span class="input-error-msg" id="msg-error">Please enter your message.</span>
+                </div>
+
+                <button type="submit" class="btn btn-sunset btn-full" id="submit-btn">
+                  <span>Send Message</span>
+                  <i data-lucide="send"></i>
+                </button>
+              </form>
+
+              <div id="form-success" class="success-notice-box" style="display: none;">
+                <i data-lucide="check-circle" class="success-check-icon"></i>
+                <div>
+                  <h4>Message Dispatched!</h4>
+                  <p>Thanks for reaching out! I will check your note and get back to you soon.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nest-footer">
+    <div class="nest-container footer-content-grid">
+      <div class="footer-col-brand">
+        <a href="#hero" class="brand-link">
+          <span class="brand-badge">&lt;nest/&gt;</span>
+          <span class="brand-name">Arnab<span class="brand-highlight">.build</span></span>
+        </a>
+        <p class="footer-blurb">1st Year CS Undergrad @ NST Hyderabad • Hacktoberfest Winner • Creator of MeetingShield</p>
+      </div>
+
+      <div class="footer-col-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Toolkit</a>
+        <a href="#journey">Journey</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col-copyright">
+        <p>© <span id="current-year">2026</span> Arnab Saha. All rights reserved.</p>
+        <p class="handwritten-footer-note">APS Shillong ➔ NST Hyderabad • Built with Static HTML5, CSS & JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive MeetingShield Live Demo Modal -->
+  <div class="case-study-modal" id="demo-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card demo-modal-dialog">
+      <button class="modal-dismiss-btn" id="demo-modal-close" aria-label="Close demo">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <span class="track-tag tag-ai">Live Interactive Test Drive</span>
+        <span class="demo-privacy-tag"><i data-lucide="shield-check"></i> 100% On-Device AI • 0 Cloud Traffic</span>
+      </div>
+
+      <h2 class="modal-headline" style="margin-top: 0.5rem;">MeetingShield — On-Device Intelligence Simulator</h2>
+      <p style="font-size: 0.95rem; color: rgba(253, 243, 226, 0.8); margin-bottom: 1rem;">
+        Experience how MeetingShield uses local <strong>Google Gemma 2</strong> to ingest raw meeting transcripts, parse commitments, and generate structured decisions offline.
+      </p>
+
+      <div class="demo-workbench">
+        <!-- Presets -->
+        <div>
+          <span style="display: block; font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; color: var(--sun-glow); margin-bottom: 0.5rem;">CHOOSE A MEETING SCENARIO:</span>
+          <div class="demo-preset-tabs">
+            <button class="demo-preset-btn active" id="preset-smru" onclick="loadPreset('smru')">SMRU Hack Day Sync</button>
+            <button class="demo-preset-btn" id="preset-nst" onclick="loadPreset('nst')">NST Hyderabad Dev Pod</button>
+            <button class="demo-preset-btn" id="preset-custom" onclick="loadPreset('custom')">Custom Transcript</button>
+          </div>
+        </div>
+
+        <!-- Transcript Input Area -->
+        <div class="demo-input-box">
+          <div class="demo-input-label">
+            <span>MEETING TRANSCRIPT STREAM (Whisper Offline)</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(253, 243, 226, 0.5);">Speaker Audio Stream</span>
+          </div>
+          <textarea id="demo-transcript-input" class="demo-textarea" placeholder="Paste or edit conversation transcript here..."></textarea>
+        </div>
+
+        <!-- Run Simulation Button -->
+        <div class="demo-actions-row">
+          <button class="btn btn-sunset" id="run-sim-btn" onclick="runMeetingShieldSimulation()">
+            <i data-lucide="cpu"></i>
+            <span>Run On-Device Gemma 2 Analysis</span>
+          </button>
+          <span class="demo-status-text" id="sim-status">
+            <i data-lucide="check-circle-2"></i> Ready for local inference
+          </span>
+        </div>
+
+        <!-- Output Results Deck -->
+        <div class="demo-results-deck" id="demo-output-area">
+          
+          <!-- Key Decisions -->
+          <div class="demo-section-card">
+            <h4 class="demo-card-title"><i data-lucide="check-circle"></i> Key Decisions Reached</h4>
+            <ul class="demo-list" id="demo-decisions-list">
+              <!-- Filled via script.js -->
+            </ul>
+          </div>
+
+          <!-- Action Items -->
+          <div class="demo-section-card">
+            <h4 class="demo-card-title"><i data-lucide="list-todo"></i> Assigned Action Items & Owners</h4>
+            <ul class="demo-list" id="demo-actions-list">
+              <!-- Filled via script.js -->
+            </ul>
+          </div>
+
+          <!-- Consensus & Notes -->
+          <div class="demo-section-card">
+            <h4 class="demo-card-title"><i data-lucide="alert-circle"></i> Consensus Gaps & Things to Remember</h4>
+            <ul class="demo-list" id="demo-notes-list">
+              <!-- Filled via script.js -->
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Hacktoberfest PR & Contribution Explorer Modal -->
+  <div class="case-study-modal" id="hacktober-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card demo-modal-dialog">
+      <button class="modal-dismiss-btn" id="hacktober-modal-close" aria-label="Close PR explorer">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <span class="track-tag tag-saas">Open Source PR Explorer</span>
+        <span class="pr-badge-merged"><i data-lucide="git-merge"></i> 4/4 PRs Merged • Winner 🏆</span>
+      </div>
+
+      <h2 class="modal-headline" style="margin-top: 0.5rem;">Hacktoberfest — Verified Pull Request Explorer</h2>
+      <p style="font-size: 0.95rem; color: rgba(253, 243, 226, 0.8); margin-bottom: 1rem;">
+        Explore real pull requests, code diffs, and maintainer reviews that won Hacktoberfest.
+      </p>
+
+      <div class="demo-workbench">
+        <!-- PR Selection Tabs -->
+        <div>
+          <span style="display: block; font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; color: var(--sun-glow); margin-bottom: 0.5rem;">SELECT MERGED PULL REQUEST:</span>
+          <div class="demo-preset-tabs">
+            <button class="demo-preset-btn active" id="pr-tab-1" onclick="selectPR(1)">PR #1: Timeout Trap Fix</button>
+            <button class="demo-preset-btn" id="pr-tab-2" onclick="selectPR(2)">PR #2: Schema Validator</button>
+            <button class="demo-preset-btn" id="pr-tab-3" onclick="selectPR(3)">PR #3: CLI Docs Parity</button>
+          </div>
+        </div>
+
+        <!-- PR Details Header -->
+        <div style="background: rgba(36, 27, 46, 0.65); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+            <div>
+              <h3 id="pr-title" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--accent-cream); margin-bottom: 0.25rem;">Loading PR...</h3>
+              <p id="pr-repo" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--sun-glow);">repo: open-source/tooling</p>
+            </div>
+            <span class="pr-badge-merged" id="pr-status-badge"><i data-lucide="git-merge"></i> Merged into main</span>
+          </div>
+          <p id="pr-desc" style="font-size: 0.9rem; color: rgba(253, 243, 226, 0.85); margin-top: 0.75rem;">PR description here.</p>
+        </div>
+
+        <!-- Code Diff Viewer -->
+        <div class="diff-box">
+          <div class="diff-header">
+            <span id="diff-filename">src/stream_listener.ts</span>
+            <span id="diff-stats" style="color: #8df0b4;">+24 / -8 lines</span>
+          </div>
+          <div class="diff-body" id="diff-content">
+            <!-- Injected via script.js -->
+          </div>
+        </div>
+
+        <!-- Maintainer Review Comment -->
+        <div class="maintainer-review-card">
+          <div class="maintainer-meta">
+            <div class="maintainer-avatar">M</div>
+            <div>
+              <span class="maintainer-name" id="reviewer-name">OpenSource Maintainer</span>
+              <span style="font-size: 0.75rem; color: rgba(253, 243, 226, 0.5); margin-left: 0.5rem;">Repository Maintainer</span>
+            </div>
+          </div>
+          <p class="maintainer-quote" id="reviewer-comment">"Approved and merged. Great catch on the thread-blocking trap! Thanks for your contribution to Hacktoberfest!"</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Dialog for Case Studies -->
+  <div class="case-study-modal" id="case-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-dismiss-btn" id="modal-close" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-inner-scroll" id="modal-body-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="nest-toast" class="nest-toast" role="alert" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
